@@ -29,6 +29,8 @@ $ brew tap softprops/tools
 $ brew install git-codeowners
 ```
 
+2) Install this extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=dtangren.vs-codeowners) (or by entering `ext install dtangren.vs-codeowners` at the command palette `Ctrl+P`).
+
 ## Known Issues
 
 Find a 🐛 or have an idea for a feature? Open an issue [here](https://github.com/softprops/vs-codeowners/issues/new) and let us know what you think?
