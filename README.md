@@ -1,6 +1,6 @@
 # vs-codeowners
 
-> A VSCode extension for making use of [GitHub CODEOWNERS](https://help.github.com/en/articles/about-code-owners) in your editor
+> A [VSCode](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/items?itemName=dtangren.vs-codeowners) for making use of [GitHub CODEOWNERS](https://help.github.com/en/articles/about-code-owners) in your editor
 
 ## Features
 
