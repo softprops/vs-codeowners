@@ -5,6 +5,10 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"publisher": "dtangren",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/softprops/vs-codeowners"
+	},
 	"engines": {
 		"vscode": "^1.37.0"
 	},
