@@ -4,7 +4,7 @@
 
 ## Install
 
-See the [Requirements](#requirements) section
+See the [Requirements](#requirements) section for installation notes
 
 ## Features
 
