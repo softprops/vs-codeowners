@@ -4,11 +4,18 @@
 
 ## Features
 
+* Syntax highlighting for `CODEOWNERS` files
+
+![syntax highlighting](syntax.png)
+
 * See the `CODEOWNER` of current file in status bar
+
+![status bar](statusbar.png)
 
 * Jump to `CODEOWNERS` file
 
-* Syntax highlighting for `CODEOWNERS` files
+You can click the status bar item to jump right into the `CODEOWNERS` file
+
 
 ## Requirements
 

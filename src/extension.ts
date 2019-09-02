@@ -1,11 +1,11 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import { commands, window, workspace, WorkspaceFolder, ExtensionContext, StatusBarAlignment } from 'vscode';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import * as path from 'path';
 
 const execAsync = promisify(exec);
+// this also declared in package.json
+const OPEN_COMMAND = 'vscode-codeowners.open';
 
 const parseOwners = (stdout: string): string[] => {
 	return stdout
@@ -16,22 +16,22 @@ const parseOwners = (stdout: string): string[] => {
 
 const fetchOwners = async (file: string, folder: WorkspaceFolder): Promise<string[]> => {
 	try {
-		const out = await execAsync("git codeowners " + file, {
+		const out = await execAsync(`git codeowners ${file}`, {
 			cwd: folder.uri.fsPath
 		});
 		return parseOwners(out.stdout);
 	}
 	catch (err) {
-		console.log(err);
+		console.error(`failed to fetch code owners for file ${file}: ${err}`);
 		throw err;
 	}
 };
 
 const ownerText = (owners: string[]): string => {
 	switch (owners.length) {
-		case 0:	return "no one";
+		case 0:	return 'no one';
 		case 1: return owners[0];
-		default: return owners[0] + " +";
+		default: return `${owners[0]} +`;
 	}
 };
 
@@ -39,13 +39,11 @@ const ownerText = (owners: string[]): string => {
 // your extension is activated the very first time the command is executed
 export function activate(context: ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
 	console.log('vs-codeowners is now active');
 
 	const ownersHint = window.createStatusBarItem(StatusBarAlignment.Right);
 	ownersHint.tooltip = 'Open in CODEOWNERS';
-	ownersHint.command = 'vscode-codeowners.open';
+	ownersHint.command = OPEN_COMMAND;
 
   context.subscriptions.push(ownersHint);
 
@@ -73,10 +71,7 @@ export function activate(context: ExtensionContext) {
 			);
 		}
 	));
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = commands.registerCommand('vscode-codeowners.open', async () => {
+	const disposable = commands.registerCommand(OPEN_COMMAND, async () => {
 		return workspace.findFiles('CODEOWNERS', '**​/node_modules/**', 1)
 			.then(
 				(files) => {
