@@ -25,8 +25,10 @@ Find a section of a codebase you'd like to claim ownership over? You can click t
 
 1) Install [`git-codeowners`](https://github.com/softprops/git-codeowners) first
 
-Git Codeowners is a command line tool for interactive with GitHub `CODEOWNERS` files.
-It can easily be installed using homebrew.
+
+💡 Git Codeowners is a command line tool for that extends your git workflow to query a repository's GitHub `CODEOWNERS` files.
+
+It can easily be installed using homebrew. See the project's [`README`](https://github.com/softprops/git-codeowners#readme) for more information.
 
 ```sh
 $ brew tap softprops/tools
