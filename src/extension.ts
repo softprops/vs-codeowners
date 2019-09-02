@@ -61,7 +61,7 @@ export function activate(context: ExtensionContext) {
 			const file = fileName.split(`${folder.uri.fsPath}${path.sep}`)[1];
 			fetchOwners(file, folder).then(
 				(owners) => {
-					ownersHint.text = "Codeowner " + ownerText(owners);
+					ownersHint.text = `Codeowner ${ownerText(owners)}`;
 					ownersHint.show();
 				}
 			).catch(
