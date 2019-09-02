@@ -1,4 +1,4 @@
-# vs-codeowners [![](https://github.com/softprops/vs-codeowners/workflows/Main/badge.svg)](https://github.com/softprops/vs-codeowners/actions)
+# vs-codeowners
 
 > A [VSCode](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/items?itemName=dtangren.vs-codeowners) for making use of [GitHub CODEOWNERS](https://help.github.com/en/articles/about-code-owners) in your editor
 
