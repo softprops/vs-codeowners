@@ -29,7 +29,7 @@ const fetchOwners = async (file: string, folder: WorkspaceFolder): Promise<strin
 
 const ownerText = (owners: string[]): string => {
 	switch (owners.length) {
-		case 0:	return "none";
+		case 0:	return "no one";
 		case 1: return owners[0];
 		default: return owners[0] + " +";
 	}
