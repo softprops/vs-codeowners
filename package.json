@@ -4,6 +4,7 @@
 	"description": "Make use of GitHub CODEOWNERS file inside your editor",
 	"version": "0.0.1",
 	"license": "MIT",
+	"publisher": "dtangren",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
