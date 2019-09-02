@@ -31,7 +31,7 @@ $ brew install git-codeowners
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Find a 🐛 or have an idea for a feature? Open an issue [here](https://github.com/softprops/vs-codeowners/issues/new) and let us know what you think?
 
 ## Release Notes
 
