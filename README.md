@@ -16,9 +16,9 @@ See the [Requirements](#requirements) section
 
 ![status bar](statusbar.png)
 
-* Jump to `CODEOWNERS` file
+* Quick jump to `CODEOWNERS` file
 
-You can click the status bar item to jump right into the `CODEOWNERS` file
+Find a section of a codebase you'd like to claim ownership over? You can click the `CODEOWNERS` status bar item to jump right into the `CODEOWNERS` file to kick off that discussion.
 
 
 ## Requirements
